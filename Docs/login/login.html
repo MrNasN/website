@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <meta name="description" content="Why page for In The Ward Of... books and resources.">
+    <meta name="keywords" content="Doctor, Mohammed, Dr, Ward, CNS, Series, Book">
+    <meta name="author" content="Nasr Allah Al-Askari">
+    <link rel="icon" href="../../../img/logo.svg">
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+
+<body>
+    <header id="site-header">
+        <div id="profile-header">
+            <div id="name-group">
+                <a href="../../../index.html"><img src="../../../img/Proud.svg" id="profile-icon" alt="Profile icon"></a>
+                <h1><b>Login</b></h1>
+            </div>
+            <a href="../../../index.html">
+                <img src="../../../img/logo.svg" alt="Logo" id="website-logo">
+            </a>
+        </div>
+
+        <nav id="nav-bar">
+            <a href="../../../index.html">Home</a>
+            <div class="dropdown">
+                <button class="dropbtn">Series</button>
+                <div class="dropdown-content">
+                    <a href="../series/CNS/CNS.html">CNS</a>
+                    <a href="../series/CVS/CVS.html">CVS</a>
+                    <a href="../series/DS/DS.html">DS</a>
+                    <a href="../series/ES/ES.html">ES</a>
+                    <a href="../series/GUS/GUS.html">GUS</a>
+                    <a href="../series/HD/HD.html">HD</a>
+                    <a href="../series/RD/RD.html">RD</a>
+                    <a href="../series/RS/RS.html">RS</a>
+                </div>
+            </div>
+            <a href="../vid/videos.html">Videos</a>
+            <a href="../Scitches/Scitches.html">Scitches</a>
+            <a href="../why/why.html">Why</a>
+            <a href="../FAQ/FAQ.html">FAQ</a>
+            <a href="../login/login.html">Login</a>
+            <a href="../../../Docs/contact/contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <main class="main-login">
+        <section class="target-login">
+            <form class="login-form" method="POST">
+                <div class="form-group-username">
+                    <label for="username"><b>Username:</b></label>
+                    <input id="username" class="username" type="text" name="username" placeholder="ex: @MrNasN" pattern="^@[a-zA-Z0-9_]+$" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email" ><b>Email:</b></label>
+                    <input id="email" class="email" type="email" placeholder="example@gmail.com" name="email" required>
+                </div>
+                
+                <div class="form-group-password">
+                    <label for="password" ><b>Password:</b></label>
+                    <input id="password" class="password" type="password" placeholder="password" name="password" required>
+                </div>
+
+                <div class="form-button">
+                    <input class="login-btn" type="submit" value="Login">
+                </div>
+            </form>
+        </section>
+    </main>
+    <!-- Toast Notifications & Form Handler -->
+    <script src="../../JS/toast.js"></script>
+</body>
+</html>
