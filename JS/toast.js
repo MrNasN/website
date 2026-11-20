@@ -67,11 +67,11 @@
         if (contactForm) {
             contactForm.addEventListener('submit', async function (e) {
                 e.preventDefault();
-                const formatData = {};
-                formatData.name = document.getElementById('contactname').value.trim();
-                formatData.email = document.getElementById('contactEmail').value.trim();
-                formatData.subject = document.getElementById('contactSubject').value.trim();
-                formatData.message = document.getElementById('contactMessage').value.trim();
+                const formData = {};
+                formData.name = document.getElementById('contactname').value.trim();
+                formData.email = document.getElementById('contactEmail').value.trim();
+                formData.subject = document.getElementById('contactSubject').value.trim();
+                formData.message = document.getElementById('contactMessage').value.trim();
                  
                 const nameInput = document.getElementById('contactname');
                 const senderName = nameInput && nameInput.value.trim() ? nameInput.value.trim() : 'Doctor';
