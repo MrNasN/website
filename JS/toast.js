@@ -67,7 +67,7 @@
         if (contactForm) {
             contactForm.addEventListener('submit', async function (e) {
                 e.preventDefault();
-                const formData = {};
+                const formatData = {};
                 formatData.name = document.getElementById('contactname').value.trim();
                 formatData.email = document.getElementById('contactEmail').value.trim();
                 formatData.subject = document.getElementById('contactSubject').value.trim();
