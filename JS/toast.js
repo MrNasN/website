@@ -65,14 +65,20 @@
         // 1. Contact Form
         const contactForm = document.getElementById('contactForm');
         if (contactForm) {
-            contactForm.addEventListener('submit', async function (e) {
+            contactForm.addEventListener('submit', async function (e) { //this will make the function uses await inside the function to wait till the server give us a response and not performing actions till then also this allows the other functions work even tho the response haven't arraived yet
                 e.preventDefault();
-                const formData = {};
-                formData.name = document.getElementById('contactname').value.trim();
+                const formData = {}; // here we created an empty object so the valuse will be stored here as one json block instead of writting 4 rows for each input
+                formData.name = document.getElementById('contactname').value.trim(); // trim() will remove acceidintal spaces from the user input
                 formData.email = document.getElementById('contactEmail').value.trim();
                 formData.subject = document.getElementById('contactSubject').value.trim();
                 formData.message = document.getElementById('contactMessage').value.trim();
                  
+                // here we are telling the fetch function to not use the deafault method (GET) and uses the (POST) method instead
+                const response = await fetch('/api/contact',{
+                    method: 'POST'
+
+                });
+
                 const nameInput = document.getElementById('contactname');
                 const senderName = nameInput && nameInput.value.trim() ? nameInput.value.trim() : 'Doctor';
 
