@@ -75,7 +75,10 @@
                  
                 // here we are telling the fetch function to not use the deafault method (GET) and uses the (POST) method instead
                 const response = await fetch('/api/contact',{
-                    method: 'POST'
+                    method: 'POST',
+                    headers: {
+                        'Contact-Type': 'application/json' // this will tell the server we are sending a json type of data 
+                    }
 
                 });
 
