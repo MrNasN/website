@@ -65,8 +65,14 @@
         // 1. Contact Form
         const contactForm = document.getElementById('contactForm');
         if (contactForm) {
-            contactForm.addEventListener('submit', function (e) {
+            contactForm.addEventListener('submit', async function (e) {
                 e.preventDefault();
+                const formData = {};
+                formatData.name = document.getElementById('contactname').value.trim();
+                formatData.email = document.getElementById('contactEmail').value.trim();
+                formatData.subject = document.getElementById('contactSubject').value.trim();
+                formatData.message = document.getElementById('contactMessage').value.trim();
+                 
                 const nameInput = document.getElementById('contactname');
                 const senderName = nameInput && nameInput.value.trim() ? nameInput.value.trim() : 'Doctor';
 
