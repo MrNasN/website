@@ -77,7 +77,7 @@
                 const response = await fetch('/api/contact',{
                     method: 'POST',
                     headers: {
-                        'Contact-Type': 'application/json' // this will tell the server we are sending a json type of data 
+                        'Content-Type': 'application/json' // this will tell the server we are sending a json type of data 
                     }
 
                 });
